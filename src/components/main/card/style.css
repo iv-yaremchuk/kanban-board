@@ -1,0 +1,47 @@
+.card {
+  background-color: #EBECF0;
+  padding: 12px 12px 8px;
+  border-radius: 10px;
+  min-width: 282px;
+  margin-bottom: auto;
+}
+
+.card__title {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0 0 20px;
+}
+
+.card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 472px;
+  overflow: auto;
+}
+
+.card__item {
+  background-color: #fff;
+  padding: 8px 7px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.card__subtitle {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+.card__btn {
+  display: flex;
+  align-items: center;
+  color: #5E6C84;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-icon {
+  margin-right: 4px;
+}

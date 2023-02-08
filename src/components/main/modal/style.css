@@ -1,0 +1,19 @@
+.modal {
+  width: 95%;
+  height: 95%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.modal__title {
+
+}
+.modal__text {
+
+}
+
+.modal__btn {
+
+}

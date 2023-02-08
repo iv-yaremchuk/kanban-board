@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  background-color: #0067A3;
+  padding: 0 20px;
+}
+
+.tasks-active {
+  margin-right: 36px;
+}
+
+.tasks-finished {
+
+}
+
+.tasks-creator {
+  margin-left: auto;
+}
