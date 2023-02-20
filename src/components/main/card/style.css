@@ -1,8 +1,8 @@
 .card {
-  background-color: #EBECF0;
+  background-color: #ebecf0;
   padding: 12px 12px 8px;
   border-radius: 10px;
-  min-width: 282px;
+  min-width: 258px;
   margin-bottom: auto;
 }
 
@@ -16,32 +16,101 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 472px;
+  max-height: 490px;
   overflow: auto;
 }
 
-.card__item {
+.card__text {
+  margin-top: 0;
+}
+
+.card__item, .card__input, .card__select {
   background-color: #fff;
-  padding: 8px 7px;
+  padding: 9px 7px;
   margin-bottom: 15px;
   border-radius: 5px;
+  border: none;
+}
+
+.card__link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .card__subtitle {
+  width: fit-content;
   font-weight: inherit;
   font-size: inherit;
+  line-height: 16px;
   margin: 0;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s linear;
 }
 
-.card__btn {
-  display: flex;
+.card__subtitle:hover {
+  border-color: black;
+}
+
+.card__btn--add {
+  display: none;
   align-items: center;
-  color: #5E6C84;
+  color: #5e6c84;
   background: none;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.2s linear;
+}
+
+.card__btn--add:hover {
+  background-color: #fff;
+}
+
+.card__btn--add.is-active {
+  display: flex;
 }
 
 .btn-icon {
   margin-right: 4px;
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__input {
+  
+}
+
+.card__btn--submit {
+  align-self: self-start;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #0067A3;
+  padding: 4px 21px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.card__btn--submit:hover {
+  background-color: #0079bf;
+}
+
+.card__select {
+  width: 100%;
+  cursor: pointer;
+}
+.card__option {
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .card__list {
+    max-height: 150px;
+  }
 }

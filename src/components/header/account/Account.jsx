@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-
-// import Dropdown from './dropdown/Dropdown';
-
 import avatar from './user-avatar.svg';
 
 function Account() {
@@ -24,6 +21,9 @@ function Account() {
           />
         </button>
         <span
+          onClick={() => {
+            setState(!state);
+          }}
           className={
             state ? 'header-account__arrow' : 'header-account__arrow is-active'
           }

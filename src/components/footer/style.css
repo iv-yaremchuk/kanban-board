@@ -15,3 +15,9 @@
 .tasks-creator {
   margin-left: auto;
 }
+
+@media (max-width: 500px) {
+  .footer {
+    display: none;
+  }
+}

@@ -1,8 +1,16 @@
 .main {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 24px;
-  height: 538px;
   background-color: #0079BF;
   padding: 20px 20px 32px;
+  height: calc(100vh - 186px);
+}
+
+@media (max-width: 500px) {
+  .main {
+    height: 100%;
+    padding: 90px 20px 180px;
+  }
 }

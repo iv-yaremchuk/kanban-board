@@ -12,4 +12,13 @@
   line-height: 33px;
 }
 
+@media (max-width: 500px) {
+  .header {
+    background-color: #0079BF;
+    padding: 14px 15px 0px;
+  }
 
+  .header__title {
+    font-size: 0;
+  }
+}

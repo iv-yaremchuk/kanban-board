@@ -10,7 +10,6 @@
   padding: 0;
   border: none;
   border-radius: 30px;
-  /* background-color: transparent; */
   cursor: pointer;
   margin-right: 6.8px;
 }
@@ -49,8 +48,8 @@
 
 
 .dropdown-menu {
-  position: fixed;
-  top: 72px;
+  position: absolute;
+  top: 70px;
   right: 9px;
   min-width: 134px;
   display: flex;
@@ -97,4 +96,14 @@
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .dropdown-menu {
+    top: 65px;
+  }
+
+  .dropdown-menu::before {
+    right: 40px;
+  }
 }

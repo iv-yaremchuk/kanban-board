@@ -1,22 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { useNavigate } from 'react-router-dom';
+function Modal(props) {
+  const { tasks, setTasks } = props;
 
-function Modal() {
+  const { id } = useParams();
+  const task = JSON.parse(window.localStorage.getItem('tasks')).find(
+    (task) => task.id === id
+    );
+    
   const navigate = useNavigate();
+  const [description, setDescription] = useState(
+    task.description ? task.description : 'This task has no description'
+  );
+
+  const addDescription = () => {
+    const tasksCopy = tasks.map((elem) => {
+      if (elem.id === id) {
+        elem.description = description;
+      }
+      return elem;
+    });
+    setTasks(tasksCopy);
+  }
+
   return (
     <div className="modal">
-      <h2 className="modal__title">Main page – performance issues</h2>
-      <p className="modal__text">
-        Это был темный лес, издали казавшийся непроходимым. Там Пахапиль
-        охотился, глушил рыбу, спал на еловых ветках. Короче – жил, пока русские
-        не выгнали оккупантов. А когда немцы ушли, Пахапиль вернулся. Он
-        появился в Раквере, где советский капитан наградил его медалью. Медаль
-        была украшена четырьмя непонятными словами, фигурой и восклицательным
-        знаком.
-      </p>
-      <button onClick={() => navigate(-1)} className='modal__btn'></button>
+      <div className="modal__wrap">
+        <h2 className="modal__title">{task.title}</h2>
+        <textarea
+          className="modal__text"
+          onFocus={() => {
+            description === 'This task has no description' &&
+              setDescription('');
+          }}
+          onChange={(e) => {
+            setDescription(e.target.value);
+          }}
+          value={description}
+          onBlur={addDescription}
+        ></textarea>
+        <button onClick={() => navigate(-1)} className="modal__btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
+            fill="none"
+          >
+            <line
+              x1="1.35355"
+              y1="0.646447"
+              x2="24.3536"
+              y2="23.6464"
+              stroke="black"
+            />
+            <line
+              y1="-0.5"
+              x2="32.5269"
+              y2="-0.5"
+              transform="matrix(-0.707107 0.707107 0.707107 0.707107 24 1)"
+              stroke="black"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }
