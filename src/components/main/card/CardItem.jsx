@@ -39,7 +39,7 @@ function CardItem(props) {
   function CardItemFormOrSelect() {
     const handleSubmit = (e) => {
       e.preventDefault();
-      if (inputValueRef.current.value) {
+      if (inputValueRef.current.value.trim()) {
         createNewTask(inputValueRef.current.value);
       }
       setActive(false);

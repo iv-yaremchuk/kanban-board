@@ -28,13 +28,18 @@
 .modal__text {
   width: 80%;
   height: 80%;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: border 0.2s linear;
+}
+
+.modal__text:hover {
+  cursor: pointer;
 }
 
 .modal__text:focus {
   outline: none;
-  border-color: inherit;
+  border-color: #0067a3;
+  cursor: auto;
 }
 
 .modal__btn {
@@ -50,11 +55,24 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.2s linear;
+  transform: scale(1);
+  transition: background-color 0.1s linear, transform 0.1s linear,
+    outline 0.1s linear;
 }
 
-.modal__btn:hover {
+.modal__btn:hover,
+.modal__btn:focus-visible {
   background-color: #ebecf0;
+  transform: scale(0.95);
+}
+
+.modal__btn:focus-visible {
+  outline: 2px solid #0067a3;
+  outline-offset: 2px;
+}
+
+.modal__btn:active {
+  transform: scale(0.9);
 }
 
 @media (max-width: 500px) {

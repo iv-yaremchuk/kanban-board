@@ -2,7 +2,7 @@
   background-color: #ebecf0;
   padding: 12px 12px 8px;
   border-radius: 10px;
-  min-width: 258px;
+  width: 258px;
   margin-bottom: auto;
 }
 
@@ -37,18 +37,27 @@
   text-decoration: none;
 }
 
-.card__subtitle {
-  width: fit-content;
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: 16px;
-  margin: 0;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.2s linear;
+.card__link:hover {
+  text-decoration: underline;
 }
 
-.card__subtitle:hover {
-  border-color: black;
+.card__link:focus-visible {
+  color: #0067a3;
+  text-decoration: underline;
+  outline: none;
+}
+
+.card__link:active {
+  color: #0067a3;
+  text-decoration: none;
+}
+
+.card__subtitle {
+  word-wrap: break-word;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: 21px;
+  margin: 0;
 }
 
 .card__btn--add {
@@ -60,11 +69,24 @@
   border-radius: 5px;
   cursor: pointer;
   padding: 5px;
-  transition: background-color 0.2s linear;
+  transform: scale(1);
+  transition: background-color 0.1s linear, transform 0.1s linear,
+  outline 0.1s linear;
 }
 
-.card__btn--add:hover {
+.card__btn--add:hover, .card__btn--add:focus-visible, .card__btn--submit:hover {
   background-color: #fff;
+  transform: scale(0.95);
+}
+
+.card__btn--add:focus-visible, .card__input:focus-visible, .card__btn--submit:focus-visible, .card__select:focus-visible {
+  outline: 2px solid #0067a3;
+  outline-offset: 2px;
+  transform: scale(0.95);
+}
+
+.card__btn--add:active, .card__btn--submit:active {
+  transform: scale(0.90);
 }
 
 .card__btn--add.is-active {
@@ -81,7 +103,8 @@
 }
 
 .card__input {
-  
+  transition: transform 0.1s linear,
+  outline 0.1s linear;
 }
 
 .card__btn--submit {
@@ -93,16 +116,21 @@
   padding: 4px 21px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.1s linear, transform 0.1s linear,
+  outline 0.1s linear;
 }
 
 .card__btn--submit:hover {
   background-color: #0079bf;
+  padding-top: 2px;
+  padding-bottom: 6px;
 }
 
 .card__select {
   width: 100%;
   cursor: pointer;
+  transition: transform 0.1s linear,
+  outline 0.1s linear;
 }
 .card__option {
   width: 100%;
