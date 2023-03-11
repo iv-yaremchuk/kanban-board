@@ -53,6 +53,7 @@ function CardItem(props) {
         }
         return task;
       });
+
       setTasks(tasksCopy);
       setActive(false);
     };
@@ -80,7 +81,7 @@ function CardItem(props) {
           <option value={'default'}>Select task</option>
           {prevTaskList.map((task) => {
             return (
-              <option className='card__option' key={task.id} value={task.id}>
+              <option className="card__option" key={task.id} value={task.id}>
                 {task.title}
               </option>
             );
@@ -97,14 +98,18 @@ function CardItem(props) {
         {tasks.length ? (
           tasks.map((task) => (
             <li key={task.id} className="card__item">
-              <Link className='card__link' to={`/tasks/${task.id}`} state={{ background: location }}>
+              <Link
+                className="card__link"
+                to={`/tasks/${task.id}`}
+                state={{ background: location }}
+              >
                 <h2 className="card__subtitle">{task.title}</h2>
               </Link>
               <Outlet />
             </li>
           ))
         ) : (
-          <p className='card__text'>No tasks added yet</p>
+          <p className="card__text">No tasks added yet</p>
         )}
       </ul>
       {!active ? AddButton : <CardItemFormOrSelect />}
