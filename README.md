@@ -8,7 +8,7 @@
 
 ## Демо: ##
 
-[](https://user-images.githubusercontent.com/75165848/224774870-8242cfac-978a-448e-903c-6813ea501799.mp4)
+[](https://user-images.githubusercontent.com/75165848/225726902-17c25e5f-543e-4672-943e-3a54bfdb45cd.mp4)
 
 ## Демо: ##
 
