@@ -65,6 +65,7 @@ function CardItem(props) {
             type="text"
             id="title"
             className="card__input"
+            autocomplete="off"
             ref={inputValueRef}
           />
           <button type="submit" className="card__btn--submit">

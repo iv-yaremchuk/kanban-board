@@ -8,8 +8,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
-  // const initialState = JSON.parse(localStorage.getItem('tasks')) || [];
-  // const [tasks, setTasks] = useState(initialState);
   const initialState = JSON.parse(window.localStorage.getItem('tasks')) || [];
   const [tasks, setTasks] = useState([]);
 

@@ -32,12 +32,12 @@ function Account() {
       <nav className={state ? 'dropdown-menu' : 'dropdown-menu is-active'}>
         <ul className="dropdown-menu__list">
           <li className="dropdown-menu__item">
-            <a href="/" className="dropdown-menu__link">
+            <a onFocus={() => {setState(false)}} href="/" className="dropdown-menu__link">
               Profile
             </a>
           </li>
           <li className="dropdown-menu__item">
-            <a href="/" className="dropdown-menu__link">
+            <a onBlur={() => {setState(!state)}} href="/" className="dropdown-menu__link">
               Log Out
             </a>
           </li>
