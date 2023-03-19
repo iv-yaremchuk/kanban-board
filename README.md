@@ -19,4 +19,3 @@
 ## Демонстрация Mobile: ##
 
 [](https://user-images.githubusercontent.com/75165848/225391896-6f5580a4-8dea-4608-ba03-a2dbd01f72df.mp4)
-
